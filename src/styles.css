@@ -1,0 +1,55 @@
+body,html {
+overflow-x: hidden;
+}
+p {
+    opacity:1;
+    transition:opacity 900ms;
+}
+p.hider {
+    opacity:0;
+}
+
+.noise {
+  overflow: hidden;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .7;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.mobNav:focus {
+    transform: rotateX(180deg);
+    transition: transform 0.8s;
+}
+.mobNav{
+    transition: transform 0.8s;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
